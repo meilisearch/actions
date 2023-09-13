@@ -17,7 +17,7 @@ jobs:
       - uses: meilisearch/actions/cloud-crawler@main
         with:
           token: ${{ secrets.MEILISEARCH_CLOUD_CRAWLER_TOKEN }} # required
-          ignoreConcurrencyError: true                          # optional (default: true)
+          ignoreConcurrencyError: false                         # optional (default: true)
 ```
 
 
