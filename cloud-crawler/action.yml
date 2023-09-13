@@ -1,0 +1,20 @@
+name: 'Trigger a Meilisearch Cloud Crawler'
+description: 'Trigger a Meilisearch Cloud Crawler previously configured'
+inputs:
+  token:
+    description: "Your Meilisearch Cloud crawler configuration from your dashboard"
+    required: true
+
+  ignoreConcurrencyError:
+    description: 'Meilisearch Cloud only accepts one crawler per run, it will raise an error if you had this concurrency impact.'
+    required: false
+    default: 'true'
+
+  env:
+    description: "Which Meilisearch environment you're using"
+    required: false
+    default: 'production'
+
+runs:
+  using: 'node20'
+  main: 'index.js'
