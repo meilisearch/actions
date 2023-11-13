@@ -15,8 +15,7 @@ try {
   client
     .postJson(`${url}/api/v1/crawlers/start`, {}, { Authorization: `Bearer ${token}` })
     .then((response) => {
-      core.info(`status ${response.statusCode}`)
-      core.info('Success! Your crawler is running now.')
+      core.info("\u001b[35mSuccess! Your crawler is running now.  [${response.statusCode}]")
     })
     .catch((error) => {
       if (error.statusCode === 401) {
