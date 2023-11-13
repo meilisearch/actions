@@ -8,7 +8,7 @@ try {
   const env = core.getInput('env', { required: false }) || "production";
   const token = core.getInput('token', { required: true })
   const url = {
-    "production": "https://api.meilisearch.dev",
+    "production": "https://api.meilisearch.com",
     "staging": "https://api.meilisearch.dev"
   }[env];
 
